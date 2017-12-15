@@ -4,7 +4,7 @@ get the 15 first result of google
 
 ## Install
 
-npm install https://github.com/guillim/googleParser
+npm install https://github.com/guillim/npm-google_parser
 
 ## Usage
 
