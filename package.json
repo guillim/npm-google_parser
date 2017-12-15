@@ -1,0 +1,29 @@
+{
+  "name": "google-parser",
+  "version": "1.2.1",
+  "description": "google parser",
+  "main": "google_parser.js",
+  "scripts": {
+    "test": "node ./test.js --trace-sync-io"
+  },
+  "author": "GL",
+  "license": "MIT",
+  "dependencies": {
+    "dom-parser": "^0.1.5",
+    "google": "^2.1.0",
+    "request": "^2.81.0"
+  },
+  "keywords": [
+    "google",
+    "google search",
+    "google serach without api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guillim/google-parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guillim/google-parser/issues"
+  },
+  "homepage": "https://github.com/guillim/google-parser#readme"
+}
