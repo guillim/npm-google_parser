@@ -7,6 +7,7 @@ get the 15 first result of google
 npm install https://github.com/guillim/npm-google_parser
 
 ## Usage
+search the word "easy"
 
 ```javascript
 
@@ -18,7 +19,7 @@ var res =  await googleParser.search('easy')
 
 
 ## Usage with Proxy
-
+search the word "easy" with proxy http://username:password@XX.XX.XX.XX:PORT
 ```javascript
 var res =  await googleParser.search('easy',true,'username','password','ip','port')
 ```
