@@ -13,6 +13,12 @@ npm install https://github.com/guillim/npm-google_parser
 var googleParser = require("google-parser")
 
 var res =  await googleParser.search('easy')
-console.log(res);
+```
 
+
+
+## Usage with Proxy
+
+```javascript
+var res =  await googleParser.search('easy',true,'username','password','ip','port')
 ```
