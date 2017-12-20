@@ -24,7 +24,9 @@ module.exports.search = (search,isUsingProxy,username,password,ip,port) => {
                 if(err.message.match(/To go on, type the characters below\:/) != '') {
                     resolve(false);
                 } else {
-                    reject(err);
+                    // reject(err);
+                    console.log('ERROR in google_parser: cannot do the connection for this reason:',err);
+                    resolve(false)
                 }
             }
             else if(res.links == null) resolve(false);
