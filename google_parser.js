@@ -2,12 +2,23 @@ const request = require('request'), DomParser = require('dom-parser'), parser = 
 
 /**
  * @param {string} search - Google query
+ * @param {boolean} isUsingProxy - proxy Boolean
+ * @param {string} username - proxy username
+ * @param {string} password - proxy password
+ * @param {string} ip - proxy ip
+ * @param {string} port - proxy port
  * @return {Promise<Response>} - response
  */
-module.exports.search = (search) => {
+module.exports.search = (search,isUsingProxy,username,password,ip,port) => {
     return new Promise((resolve, reject) => {
         const google = require('google');
         google.resultsPerPage = 15;
+        if(isUsingProxy){
+          google.requestOptions = {
+            proxy: 'http://'+username+':'+password+'@'+ip+':'+port,
+            timeout: 5000,
+          };
+        }
         google(search, (err, res) => {
             if(err) {
                 if(err.message.match(/To go on, type the characters below\:/) != '') {
